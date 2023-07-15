@@ -7,12 +7,14 @@
 //
 
 import SwiftUI
+import TouchTracker
 
 @main
 struct ReplayKitRecordExampleApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .touchTrack()
         }
     }
 }
