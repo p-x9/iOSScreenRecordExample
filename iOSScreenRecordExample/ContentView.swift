@@ -1,9 +1,9 @@
 //
 //  ContentView.swift
-//  ReplayKitRecordExample
+//  iOSScreenRecordExample
 //
 //  Created by p-x9 on 2023/07/15.
-//  
+//
 //
 
 import SwiftUI
@@ -49,7 +49,7 @@ struct ContentView: View {
                 }
 
             } label: {
-                Text("Record with ScreenRecorder") +
+                Text("Record with RPScreenRecorder") +
                 Text(isRecording ? "(Recording)" : "")
             }
 

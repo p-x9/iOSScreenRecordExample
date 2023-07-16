@@ -1,9 +1,9 @@
 //
 //  VideoPreview.swift
-//  ReplayKitRecordExample
+//  iOSScreenRecordExample
 //
 //  Created by p-x9 on 2023/07/15.
-//  
+//
 //
 
 import SwiftUI

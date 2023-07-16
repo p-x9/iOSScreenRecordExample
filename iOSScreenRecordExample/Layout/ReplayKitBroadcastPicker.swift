@@ -1,9 +1,9 @@
 //
 //  ReplayKitBroadcastPicker.swift
-//  ReplayKitRecordExample
+//  iOSScreenRecordExample
 //
 //  Created by p-x9 on 2023/07/15.
-//  
+//
 //
 
 import SwiftUI
@@ -16,7 +16,7 @@ struct ReplayKitBroadcastPicker: UIViewRepresentable {
     func makeUIView(context: Context) -> RPSystemBroadcastPickerView {
         let broadcastPicker = RPSystemBroadcastPickerView(frame: .init(origin: .zero, size: .init(width: 100, height: 30)))
 
-        broadcastPicker.preferredExtension = Constants.appGroupIdentifier
+        broadcastPicker.preferredExtension = Constants.broadcastExtensionIdentifier
         if let button = broadcastPicker.subviews.compactMap({ $0 as? UIButton }).first {
             button.setImage(nil, for: .normal)
             button.setTitle("Record with broadcast", for: .normal)

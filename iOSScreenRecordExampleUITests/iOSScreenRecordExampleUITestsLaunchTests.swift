@@ -1,14 +1,14 @@
 //
-//  ReplayKitRecordExampleUITestsLaunchTests.swift
-//  ReplayKitRecordExample
+//  iOSScreenRecordExampleUITestsLaunchTests.swift
+//  iOSScreenRecordExample
 //
 //  Created by p-x9 on 2023/07/15.
-//  
+//
 //
 
 import XCTest
 
-final class ReplayKitRecordExampleUITestsLaunchTests: XCTestCase {
+final class iOSScreenRecordExampleUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

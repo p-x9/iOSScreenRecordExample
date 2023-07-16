@@ -1,14 +1,14 @@
 //
-//  ReplayKitRecordExampleTests.swift
-//  ReplayKitRecordExample
+//  iOSScreenRecordExampleTests.swift
+//  iOSScreenRecordExample
 //
 //  Created by p-x9 on 2023/07/15.
-//  
+//
 //
 
 import XCTest
 
-final class ReplayKitRecordExampleTests: XCTestCase {
+final class iOSScreenRecordExampleTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

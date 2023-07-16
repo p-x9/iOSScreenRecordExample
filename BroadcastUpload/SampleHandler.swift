@@ -1,9 +1,9 @@
 //
 //  SampleHandler.swift
-//  ReplayKitRecordExample
+//  iOSScreenRecordExample
 //
 //  Created by p-x9 on 2023/07/15.
-//  
+//
 //
 
 import ReplayKit
@@ -13,7 +13,7 @@ class SampleHandler: RPBroadcastSampleHandler {
 
     var outputURL: URL {
         let containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.p-x9.ReplayKitRecordExample"
+            forSecurityApplicationGroupIdentifier: "group.com.p-x9.Example"
         )!
         return containerURL.appending(components: "output.mp4")
     }
@@ -39,7 +39,7 @@ class SampleHandler: RPBroadcastSampleHandler {
         }
     }
 
-    
+
     override func broadcastFinished() {
         do {
             guard let movieWriter else { return }
@@ -51,7 +51,7 @@ class SampleHandler: RPBroadcastSampleHandler {
             print(error)
         }
     }
-    
+
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
         guard let movieWriter else { return }
 
