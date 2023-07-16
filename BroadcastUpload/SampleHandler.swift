@@ -13,7 +13,7 @@ class SampleHandler: RPBroadcastSampleHandler {
 
     var outputURL: URL {
         let containerURL = FileManager.default.containerURL(
-            forSecurityApplicationGroupIdentifier: "group.com.p-x9.Example"
+            forSecurityApplicationGroupIdentifier: Constants.appGroupIdentifier
         )!
         return containerURL.appending(components: "output.mp4")
     }

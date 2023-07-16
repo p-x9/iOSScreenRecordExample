@@ -25,6 +25,7 @@
 		42598A8D2A621F1F00B5BD34 /* BroadcastUpload.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 42598A742A621F1E00B5BD34 /* BroadcastUpload.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42598A962A621F3A00B5BD34 /* MovieWriter in Frameworks */ = {isa = PBXBuildFile; productRef = 42598A952A621F3A00B5BD34 /* MovieWriter */; };
 		4267B3552A63D1FC00C097D8 /* ScreenCapture in Frameworks */ = {isa = PBXBuildFile; productRef = 4267B3542A63D1FC00C097D8 /* ScreenCapture */; };
+		4267B3562A63E5D500C097D8 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 421A92332A62452F005F57DD /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -429,6 +430,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42598A7A2A621F1E00B5BD34 /* SampleHandler.swift in Sources */,
+				4267B3562A63E5D500C097D8 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
