@@ -24,6 +24,7 @@
 		42598A7A2A621F1E00B5BD34 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42598A792A621F1E00B5BD34 /* SampleHandler.swift */; };
 		42598A8D2A621F1F00B5BD34 /* BroadcastUpload.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 42598A742A621F1E00B5BD34 /* BroadcastUpload.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		42598A962A621F3A00B5BD34 /* MovieWriter in Frameworks */ = {isa = PBXBuildFile; productRef = 42598A952A621F3A00B5BD34 /* MovieWriter */; };
+		4267B3552A63D1FC00C097D8 /* ScreenCapture in Frameworks */ = {isa = PBXBuildFile; productRef = 4267B3542A63D1FC00C097D8 /* ScreenCapture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4267B3552A63D1FC00C097D8 /* ScreenCapture in Frameworks */,
 				42598A6F2A621ED500B5BD34 /* MovieWriter in Frameworks */,
 				42598A6C2A621EA700B5BD34 /* TouchTracker in Frameworks */,
 			);
@@ -244,6 +246,7 @@
 			packageProductDependencies = (
 				42598A6B2A621EA700B5BD34 /* TouchTracker */,
 				42598A6E2A621ED500B5BD34 /* MovieWriter */,
+				4267B3542A63D1FC00C097D8 /* ScreenCapture */,
 			);
 			productName = iOSScreenRecordExample;
 			productReference = 42598A3C2A621E8300B5BD34 /* iOSScreenRecordExample.app */;
@@ -343,6 +346,7 @@
 			packageReferences = (
 				42598A6A2A621EA700B5BD34 /* XCRemoteSwiftPackageReference "TouchTracker" */,
 				42598A6D2A621ED500B5BD34 /* XCRemoteSwiftPackageReference "MovieWriter" */,
+				4267B3532A63D1FC00C097D8 /* XCRemoteSwiftPackageReference "ScreenCapture" */,
 			);
 			productRefGroup = 42598A3D2A621E8300B5BD34 /* Products */;
 			projectDirPath = "";
@@ -854,6 +858,14 @@
 				minimumVersion = 0.1.0;
 			};
 		};
+		4267B3532A63D1FC00C097D8 /* XCRemoteSwiftPackageReference "ScreenCapture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/p-x9/ScreenCapture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -871,6 +883,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 42598A6D2A621ED500B5BD34 /* XCRemoteSwiftPackageReference "MovieWriter" */;
 			productName = MovieWriter;
+		};
+		4267B3542A63D1FC00C097D8 /* ScreenCapture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4267B3532A63D1FC00C097D8 /* XCRemoteSwiftPackageReference "ScreenCapture" */;
+			productName = ScreenCapture;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

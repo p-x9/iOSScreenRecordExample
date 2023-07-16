@@ -10,6 +10,15 @@
       }
     },
     {
+      "identity" : "screencapture",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/p-x9/ScreenCapture",
+      "state" : {
+        "revision" : "7d81b899336507477193e78f1b06b30ca6136628",
+        "version" : "0.1.1"
+      }
+    },
+    {
       "identity" : "touchtracker",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/p-x9/TouchTracker",

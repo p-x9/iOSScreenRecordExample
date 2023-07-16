@@ -14,7 +14,7 @@ struct ReplayKitBroadcastPicker: UIViewRepresentable {
     typealias UIViewType = RPSystemBroadcastPickerView
 
     func makeUIView(context: Context) -> RPSystemBroadcastPickerView {
-        let broadcastPicker = RPSystemBroadcastPickerView(frame: .init(origin: .zero, size: .init(width: 100, height: 30)))
+        let broadcastPicker = RPSystemBroadcastPickerView(frame: .init(origin: .zero, size: .init(width: 100, height: 17)))
 
         broadcastPicker.preferredExtension = Constants.broadcastExtensionIdentifier
         if let button = broadcastPicker.subviews.compactMap({ $0 as? UIButton }).first {

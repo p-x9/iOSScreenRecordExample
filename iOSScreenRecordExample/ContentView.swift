@@ -10,6 +10,7 @@ import SwiftUI
 import ReplayKit
 import UIKit
 import AVKit
+import ScreenCapture
 
 struct ContentView: View {
     var outputURL: URL {
@@ -26,36 +27,58 @@ struct ContentView: View {
 
     let fileManager: FileManager = .default
     let screenRecorder: RPScreenRecorder = .shared()
+    var screenCapture: ScreenCapture? {
+        sceneDelegate.screenCapture
+    }
 
-    @State var isRecording = false
+    @EnvironmentObject var sceneDelegate: SceneDelegate
+    @State var isRecordingWithRP = false
+    @State var isRecordingWithSC = false
     @State var showPlayer = false
 
     var body: some View {
-        VStack {
+        VStack(spacing: 24) {
             Spacer()
+
+            Button {
+                guard let screenCapture else { return }
+                if screenCapture.isRunning {
+                    try? screenCapture.end()
+                    isRecordingWithSC = false
+                    try? fileManager.removeItemIfExisted(at: outputURL)
+                    try? fileManager.moveItem(at: tmpURL, to: outputURL)
+                } else {
+                    try? fileManager.removeItemIfExisted(at: tmpURL)
+                    try? screenCapture.start(outputURL: tmpURL)
+                    isRecordingWithSC = true
+                }
+            } label: {
+                Text(isRecordingWithSC ? "(Recording)" : "") +
+                Text("Record with `render(in ctx: CGContext)`")
+            }
 
             Button {
                 if screenRecorder.isRecording {
                     try? fileManager.removeItemIfExisted(at: tmpURL)
                     screenRecorder.stopRecording(withOutput: tmpURL) { _ in
-                        isRecording = false
+                        isRecordingWithRP = false
                         try? fileManager.removeItemIfExisted(at: outputURL)
                         try? fileManager.moveItem(at: tmpURL, to: outputURL)
                     }
                 } else {
                     screenRecorder.startRecording { _ in
-                        isRecording = true
+                        isRecordingWithRP = true
                     }
                 }
 
             } label: {
-                Text("Record with RPScreenRecorder") +
-                Text(isRecording ? "(Recording)" : "")
+                Text(isRecordingWithRP ? "(Recording)" : "") +
+                Text("Record with RPScreenRecorder")
             }
 
             ReplayKitBroadcastPicker()
                 .frame(maxWidth: .infinity)
-                .frame(height: 30)
+                .frame(height: 17)
 
             Spacer()
 
