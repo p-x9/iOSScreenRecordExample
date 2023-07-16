@@ -37,7 +37,7 @@ In many cases, this is a good method to use.
 App extension used for normal screen broadcasts.
 Unlike other methods, this method also allows recording of screens outside the application.
 
-<img src="https://github.com/p-x9/iOSScreenRecordExample/assets/50244599/bb6aa2f3-7864-4c73-91b4-903bdcb0e6d2" width="375"/>
+<img src="https://github.com/p-x9/iOSScreenRecordExample/assets/50244599/94c1cda5-698a-4644-8121-2f7f3a55989a" width="375"/>
 
 ## License
 
