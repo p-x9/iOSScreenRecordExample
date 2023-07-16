@@ -1,6 +1,16 @@
 # iOSScreenRecordExample
 Collection of screen recording methods on iOS
 
+## Table of Contents
+- [iOSScreenRecordExample](#iosscreenrecordexample)
+  - [Table of Contents](#table-of-contents)
+  - [Build \& Install on real devices](#build--install-on-real-devices)
+  - [About methods of screen recording in iOS](#about-methods-of-screen-recording-in-ios)
+    - [1. Use `render(in ctx: CGContext)` of CALayer](#1-use-renderin-ctx-cgcontext-of-calayer)
+    - [2. Use `RPScreenRecorder`](#2-use-rpscreenrecorder)
+    - [3. Use Broadcast extension](#3-use-broadcast-extension)
+  - [License](#license)
+
 ## Build & Install on real devices
 Because of the ReplayKit, some functions will not work in the simulator.
 When installing on an actual device, it is necessary to change the Bundle Id and App Group ID from the Signing setting in Xcode.
