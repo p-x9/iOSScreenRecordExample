@@ -92,9 +92,14 @@ struct ContentView: View {
                 if fileManager.fileExists(atPath: outputURL.path) {
                     showPlayer = true
                 }
-
             } label: {
                 Text("Show recorded movie if exited")
+            }
+
+            Button {
+                try? fileManager.removeItemIfExisted(at: outputURL)
+            } label: {
+                Text("Delete recorded movie file")
             }
         }
         .padding()
