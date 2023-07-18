@@ -53,7 +53,9 @@ struct ContentView: View {
                     isRecordingWithSC = true
                 }
             } label: {
-                Text(isRecordingWithSC ? "(Recording)" : "") +
+                Text(isRecordingWithSC ? "(Recording) " : "")
+                    .foregroundColor(.red)
+                +
                 Text("Record with `render(in ctx: CGContext)`")
             }
 
@@ -72,7 +74,9 @@ struct ContentView: View {
                 }
 
             } label: {
-                Text(isRecordingWithRP ? "(Recording)" : "") +
+                Text(isRecordingWithSC ? "(Recording) " : "")
+                    .foregroundColor(.red)
+                +
                 Text("Record with RPScreenRecorder")
             }
 
