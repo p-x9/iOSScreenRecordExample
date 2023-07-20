@@ -74,7 +74,7 @@ struct ContentView: View {
                 }
 
             } label: {
-                Text(isRecordingWithSC ? "(Recording) " : "")
+                Text(isRecordingWithRP ? "(Recording) " : "")
                     .foregroundColor(.red)
                 +
                 Text("Record with RPScreenRecorder")
